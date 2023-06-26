@@ -2,14 +2,14 @@
 @include('sweetalert::alert')
 <h3 class="text-center mt-5 mb-4">
     <a href="index.html" class="d-block auth-logo">
-        <img src="assets/images/logo-dark.png" alt="" height="30" class="auth-logo-dark">
-        <img src="assets/images/logo-light.png" alt="" height="30" class="auth-logo-light">
+        <img src="{{ asset('') }}storage/images/logo/{{ Helper::apk()->logo }}" alt="" height="30" class="auth-logo-dark">
+        <img src="{{ asset('') }}storage/images/logo/{{ Helper::apk()->logo }}" alt="" height="30" class="auth-logo-light">
     </a>
 </h3>
 
 <div class="p-3">
     <h4 class="text-muted font-size-18 mb-1 text-center">Welcome Back !</h4>
-    <p class="text-muted text-center">Sign in to continue to Lexa.</p>
+    <p class="text-muted text-center">Sign in to continue to {{ Helper::apk()->app_name }}.</p>
     <form class="form-horizontal mt-4" id="formAuthentication" method="POST" action="{{ route('login.action') }}">
         @csrf
 
