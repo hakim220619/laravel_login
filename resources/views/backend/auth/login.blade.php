@@ -46,12 +46,8 @@
 </div>
 </div>
 <div class="mt-5 text-center">
-    <p>Don't have an account ? <a href="pages-register.html" class="text-primary"> Signup Now
-        </a></p>
-    ©
-    <script>
-        document.write(new Date().getFullYear())
-    </script> Lexa <span class="d-none d-sm-inline-block"> - Crafted with <i
-            class="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
+    {{-- <p>Don't have an account ? <a href="pages-register.html" class="text-primary"> Signup Now
+        </a></p> --}}
+{{ Helper::apk()->copy_right }} <script>document.write(new Date().getFullYear())</script> {{ Helper::apk()->app_name }} <span class="d-none d-sm-inline-block"> with Version {{ Helper::apk()->version }} by {{ Helper::apk()->owner }}.</span>
 </div>
 @include('backend.layout.footerFront')
